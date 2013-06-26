@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -35,8 +36,8 @@
     [self.nadView setNendID:@"3709f3739b04c3efb2220f69eacd7da3f0565270"
                      spotID:@"65982"];
     [self.nadView setDelegate:self];
-    [self.nadView load];
-    [self.view addSubview:self.nadView]; // 最初から表示する場合
+   // [self.nadView load];
+    //[self.view addSubview:self.nadView]; // 最初から表示する場合
     
     /************************ここまでnendの設定******************************/
     
@@ -88,5 +89,28 @@
 - (void)viewDidUnload {
     [self setNendSpace:nil];
     [super viewDidUnload];
+}
+//おすすめアプリのボタンを押したら
+- (IBAction)tapAdsButton:(UIButton *)sender {
+    NSLog(@"ボタンが押されました");
+    AppDelegate *appDelegate =(AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [GFController showGF:self site_id:@"1198" delegate: appDelegate];
+}
+// UIApplicationDelegateを継承したクラスに設定
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    UIDevice *device = [UIDevice currentDevice];
+    BOOL backgroundSupported = NO;
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)]) {
+        backgroundSupported = device.multitaskingSupported;
+    }
+    if (backgroundSupported) {
+        [GFController backgroundTask];
+    }
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [GFController conversionCheckStop];
 }
 @end

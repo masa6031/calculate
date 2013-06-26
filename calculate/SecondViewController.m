@@ -89,7 +89,7 @@
     self.ansLabel.alpha = 1;
     count = 0;
     counter = 0;
-    self.counterLabel.text = @"0/10";
+    //self.counterLabel.text = @"0/10";
     x1 = 1 + arc4random() % 8;
     x2 = 1 + arc4random() % 8;
     //開始時に音を出す
@@ -259,7 +259,7 @@
         self.questionLabel.text = [NSString stringWithFormat:@"%d + %d",x1,x2];
         count = 0;
         counter ++;
-        self.counterLabel.text = [NSString stringWithFormat:@"%d/10",counter];
+       // self.counterLabel.text = [NSString stringWithFormat:@"%d/10",counter];
 
 }
 - (IBAction)tapNumberButton:(id)sender {

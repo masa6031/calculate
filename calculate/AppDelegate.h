@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GameFeatKit/GFView.h>
+#import <GameFeatKit/GFController.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,GFViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

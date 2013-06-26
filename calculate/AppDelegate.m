@@ -10,10 +10,22 @@
 
 @implementation AppDelegate
 
+//=======================================================
+// GFViewDelegate
+//=======================================================
+- (void)didShowGameFeat{
+    // GameFeatが表示されたタイミングで呼び出されるdelegateメソッド
+    NSLog(@"didShowGameFeat");
+}
+- (void)didCloseGameFeat{
+    // GameFeatが閉じられたタイミングで呼び出されるdelegateメソッド
+    NSLog(@"didCloseGameFeat");
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    sleep(1);
+    sleep(0.5);
     return YES;
 }
 							
