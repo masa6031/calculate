@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-#define CONST_INT 5
+#define CONST_INT 30 
 //ゲーム時間の定数
 
 @interface SecondViewController ()
@@ -184,7 +184,7 @@
         self.theLightLabel.text = [NSString stringWithFormat:@"正解数：%d 問",theRight];
         self.missLabel.text = [NSString stringWithFormat:@"ミス数：%d 問",missCount];
         
-        self.timerCount.text = [NSString stringWithFormat:@"タイム：%d:00 秒",CONST_INT];
+        //self.timerCount.text = [NSString stringWithFormat:@"タイム：%d:00 秒",CONST_INT];
         
         /************************ここからnendの設定******************************/
         //nendViewのy座標を取得する。
@@ -327,9 +327,10 @@
             NSLog(@"%d",score);
             break;
     }
+    self.timerCount.text = [NSString stringWithFormat:@"得点：%d",score];
     
     
-    if(no1 <= score)
+    if(no1 < score)
     {
         [defaults setInteger:no2 forKey:@"NO3"];
         [defaults setInteger:no1 forKey:@"NO2"];
@@ -341,11 +342,13 @@
         self.no1Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO1"]];
         self.no2Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO2"]];
         self.no3Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO3"]];
-        self.rankingLabel.text = @"自己最短記録更新！1位にランクイン！！";
+        
+//        self.no1Label.textColor = [UIColor greenColor];
+        self.rankingLabel.text = @"最短記録更新\n1位にランクイン!!!";
         self.rankingLabel.hidden = NO;
         
     }
-    else if(no2 <= score)
+    else if(no2 < score)
     {
         [defaults setInteger:no2 forKey:@"NO3"];
         [defaults setInteger:score forKey:@"NO2"];
@@ -356,11 +359,12 @@
         self.no1Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO1"]];
         self.no2Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO2"]];
         self.no3Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO3"]];
-        self.rankingLabel.text = @"自己最短記録更新！2位にランクイン！！";
+//        self.no2Label.textColor = [UIColor greenColor];
+        self.rankingLabel.text = @"最短記録更新\n2位にランクイン!!!";
         self.rankingLabel.hidden = NO;
         
     }
-    else if(no3 <= score)
+    else if(no3 < score)
     {
         [defaults setInteger:score forKey:@"NO3"];
         NSLog(@"---------3位--------------");
@@ -368,9 +372,10 @@
         NSLog(@"%d",[defaults integerForKey:@"NO2"]);
         NSLog(@"%d",[defaults integerForKey:@"NO3"]);
         self.no1Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO1"]];
-        self.no1Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO2"]];
-        self.no1Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO3"]];
-        self.rankingLabel.text = @"自己最短記録更新！3位にランクイン！！";
+        self.no2Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO2"]];
+        self.no3Label.text = [NSString stringWithFormat:@"%d",[defaults integerForKey:@"NO3"]];
+//        self.no3Label.textColor = [UIColor greenColor];
+        self.rankingLabel.text = @"最短記録更新\n3位にランクイン!!!";
         self.rankingLabel.hidden = NO;
     }else{
         NSLog(@"何もなし");
