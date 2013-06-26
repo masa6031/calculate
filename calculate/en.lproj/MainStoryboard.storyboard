@@ -534,10 +534,10 @@
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="76M-ng-Rew">
+                                    <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FEo-50-WhP">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                    </adBannerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -600,6 +600,40 @@
         <image name="btn_top_start06.png" width="540" height="88"/>
         <image name="btn_top_start08.png" width="540" height="88"/>
     </resources>
+    <classes>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tapNumberButton:"/>
+                <relationship kind="outlet" name="ansLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="endView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="iAdView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="missLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="no1Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="no2Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="no3Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="no4Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="no5Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rankingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startLabel" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="theLightLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timerCount" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

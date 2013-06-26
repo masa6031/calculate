@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NADView.h"
 
 @interface ViewController : UIViewController
 -(IBAction)back:(UIStoryboardSegue *)sender;
-@property (nonatomic, strong) NADView * nadView; //nend用
 @end
