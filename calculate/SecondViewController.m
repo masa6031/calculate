@@ -46,6 +46,34 @@
 {
     [super viewDidLoad];
 
+    /***********************NENDの設定**************************/
+    //画面サイズの取得
+    UIScreen *sc = [UIScreen mainScreen];
+    //ステータスバー込みのサイズ
+    CGRect rect = sc.bounds;
+    //4インチ用の場合はバナーを設置する。
+    if(rect.size.height == 568){
+        /************************ここからnendの設定******************************/
+        //nendViewのy座標を取得する。
+        
+        //NADViewの作成
+        self.nadView2 = [[NADView alloc]initWithFrame:CGRectMake(0,244,
+                                                                NAD_ADVIEW_SIZE_320x50.width,
+                                                                NAD_ADVIEW_SIZE_320x50.height)];
+        [self.nadView2 setIsOutputLog:NO];
+        [self.nadView2 setNendID:@"3709f3739b04c3efb2220f69eacd7da3f0565270"
+                         spotID:@"65982"];
+        [self.nadView2 setDelegate:(id)self];
+        [self.nadView2 load];
+        [self.view addSubview:self.nadView2]; // 最初から表示する場合
+        
+        /************************ここまでnendの設定******************************/;
+    }else if(rect.size.height == 480){
+        NSLog(@"3.5インチです。");
+    }
+    
+    
+    /***********************NENDの設定**************************/
     NSLog(@"取得した値は：%d",self.num);
     no1 = no2 = no3 = 0;
     
@@ -92,6 +120,7 @@
 -(void)dealloc
 {
     self.nadView.delegate = nil;
+    self.nadView2.delegate = nil;
 }
 /******************ここからnendの読み込み********************************/
 //タイマー処理
@@ -145,6 +174,7 @@
     {
         //タイマーを停止する。
         [tm invalidate];
+        self.nadView2.hidden = YES;
         
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:3];
@@ -167,9 +197,9 @@
                                                                 NAD_ADVIEW_SIZE_320x50.width,
                                                                 NAD_ADVIEW_SIZE_320x50.height)];
         [self.nadView setIsOutputLog:NO];
-        [self.nadView setNendID:@"a6eca9dd074372c898dd1df549301f277c53f2b9"
-                         spotID:@"3172"];
-        [self.nadView setDelegate:self];
+        [self.nadView setNendID:@"3709f3739b04c3efb2220f69eacd7da3f0565270"
+                         spotID:@"65982"];
+        [self.nadView setDelegate:(id)self];
         [self.nadView load];
         [self.view addSubview:self.nadView]; // 最初から表示する場合
         

@@ -607,6 +607,7 @@
                 <relationship kind="outlet" name="iAdView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="missLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nendSpace" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nendSpace2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="no1Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="no2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="no3Label" candidateClass="UILabel"/>

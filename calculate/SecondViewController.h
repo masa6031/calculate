@@ -33,5 +33,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *rankingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *nendSpace;
 @property (nonatomic,retain)NADView *nadView;
+@property (nonatomic,retain)NADView *nadView2;
 
 @end

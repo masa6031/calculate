@@ -32,15 +32,14 @@
                                                             NAD_ADVIEW_SIZE_320x50.width,
                                                             NAD_ADVIEW_SIZE_320x50.height)];
     [self.nadView setIsOutputLog:NO];
-    [self.nadView setNendID:@"a6eca9dd074372c898dd1df549301f277c53f2b9"
-                     spotID:@"3172"];
+    [self.nadView setNendID:@"3709f3739b04c3efb2220f69eacd7da3f0565270"
+                     spotID:@"65982"];
     [self.nadView setDelegate:self];
     [self.nadView load];
     [self.view addSubview:self.nadView]; // 最初から表示する場合
     
     /************************ここまでnendの設定******************************/
     
-    [self.view addSubview:self.nadView];
     
     
 
@@ -63,7 +62,7 @@
 {
     self.nadView.delegate = nil;
 }
-/******************ここからnendの読み込み********************************/
+/******************ここまでnendの読み込み********************************/
 
 -(IBAction)back:(UIStoryboardSegue *)sender{}
 - (void)didReceiveMemoryWarning
