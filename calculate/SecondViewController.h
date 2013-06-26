@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NADView.h"
 
 @interface SecondViewController : UIViewController
 - (IBAction)tapNumberButton:(id)sender;
+@property (nonatomic,assign)int num;
 @property (weak, nonatomic) IBOutlet UILabel *ansLabel;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
@@ -29,5 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *no5Label;
 @property (weak, nonatomic) IBOutlet UIView *iAdView;
 @property (weak, nonatomic) IBOutlet UILabel *rankingLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *nendSpace;
+@property (nonatomic,retain)NADView *nadView;
 
 @end

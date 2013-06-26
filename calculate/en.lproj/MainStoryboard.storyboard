@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_3.png" id="Rco-Wy-3WA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="521"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </imageView>
@@ -31,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hcm-5u-4ah" kind="custom" customClass="segueFade" id="3C9-Ze-aCH"/>
+                                    <segue destination="Hcm-5u-4ah" kind="custom" identifier="showSecond" customClass="segueFade" id="3C9-Ze-aCH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="脳内体操をしよう♪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lwl-q5-RhO">
@@ -76,11 +76,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="btn_second_center01.png" id="JOG-ZD-IWG">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xA4-4e-HHR"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="nendSpace" destination="JOG-ZD-IWG" id="JWf-WU-HRi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,11 +421,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="RZn-Nn-3YE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_3.png" id="gdj-cb-ZEp">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="正解数：0問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CkZ-f9-L1p">
@@ -530,17 +537,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="uxn-UI-uKX">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FEo-50-WhP">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                    </adBannerView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -550,7 +546,6 @@
                         <outlet property="answerImage" destination="6Qe-oY-W8U" id="5cW-oC-Sn6"/>
                         <outlet property="counterLabel" destination="rrf-au-30G" id="iZK-iw-y5V"/>
                         <outlet property="endView" destination="RZn-Nn-3YE" id="e6W-b0-PPM"/>
-                        <outlet property="iAdView" destination="uxn-UI-uKX" id="lV2-Ux-jPg"/>
                         <outlet property="missLabel" destination="QFP-KP-Web" id="LWX-uB-PtH"/>
                         <outlet property="no1Label" destination="kIt-nt-dCF" id="GV7-Gb-Q7o"/>
                         <outlet property="no2Label" destination="U6h-oO-jEk" id="IxR-WY-EJg"/>
@@ -611,6 +606,7 @@
                 <relationship kind="outlet" name="endView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="iAdView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="missLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nendSpace" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="no1Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="no2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="no3Label" candidateClass="UILabel"/>
@@ -631,6 +627,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="nendSpace" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>

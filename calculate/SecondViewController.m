@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-#define CONST_INT 30
+#define CONST_INT 5
 //ゲーム時間の定数
 
 @interface SecondViewController ()
@@ -45,6 +45,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    NSLog(@"取得した値は：%d",self.num);
     no1 = no2 = no3 = 0;
     
     defaults = [NSUserDefaults standardUserDefaults];
@@ -55,7 +57,7 @@
 
     [self.navigationController setNavigationBarHidden:YES];
     self.endView.alpha = 0;
-    self.iAdView.alpha = 0;
+    self.nendSpace.alpha = 0;
     self.ansLabel.alpha = 1;
     count = 0;
     counter = 0;
@@ -73,6 +75,25 @@
 
     self.timeLabel.text = [NSString stringWithFormat:@"%d:00",CONST_INT];
 }
+/******************ここからnendの読み込み********************************/
+//nend広告ロード完了通知
+-(void)nadViewDidFinishLoad:(NADView *)adView {
+    NSLog(@"delegate nadViewDidFinishLoad:");
+}
+//nend広告受信完了通知
+-(void)nadViewDidReceiveAd:(NADView *)adView {
+    NSLog(@"delegate nadViewDidReceiveAd:");
+}
+//nend広告受信エラー通知
+-(void)nadViewDidFailToReceiveAd:(NADView *)adView {
+    NSLog(@"delegate nadViewDidFailToLoad:");
+}
+//広告の対策
+-(void)dealloc
+{
+    self.nadView.delegate = nil;
+}
+/******************ここからnendの読み込み********************************/
 //タイマー処理
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -87,6 +108,8 @@
     [UIView setAnimationDuration:2];
     self.startLabel.alpha = 0.0;
     [UIView commitAnimations];
+    
+    
     
     tm = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timeCount:) userInfo:nil repeats:YES];
 }
@@ -126,12 +149,31 @@
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:3];
         self.endView.alpha = 1.0;
-        self.iAdView.alpha = 1.0;
+        self.nendSpace.alpha = 1.0;
         [UIView commitAnimations];
         self.theLightLabel.text = [NSString stringWithFormat:@"正解数：%d 問",theRight];
         self.missLabel.text = [NSString stringWithFormat:@"ミス数：%d 問",missCount];
         
         self.timerCount.text = [NSString stringWithFormat:@"タイム：%d:00 秒",CONST_INT];
+        
+        /************************ここからnendの設定******************************/
+        //nendViewのy座標を取得する。
+        CGRect rect = self.nendSpace.frame;
+        float nendViewY = rect.origin.y;
+        NSLog(@"%f",nendViewY);
+        
+        //NADViewの作成
+        self.nadView = [[NADView alloc]initWithFrame:CGRectMake(0,self.num,
+                                                                NAD_ADVIEW_SIZE_320x50.width,
+                                                                NAD_ADVIEW_SIZE_320x50.height)];
+        [self.nadView setIsOutputLog:NO];
+        [self.nadView setNendID:@"a6eca9dd074372c898dd1df549301f277c53f2b9"
+                         spotID:@"3172"];
+        [self.nadView setDelegate:self];
+        [self.nadView load];
+        [self.view addSubview:self.nadView]; // 最初から表示する場合
+        
+        /************************ここまでnendの設定******************************/
         
         //rankingのメソッドを呼び出す。
         [self rankingMedhod];
@@ -312,6 +354,7 @@
 
 - (void)viewDidUnload {
     [self setRankingLabel:nil];
+    [self setNendSpace:nil];
     [super viewDidUnload];
 }
 @end

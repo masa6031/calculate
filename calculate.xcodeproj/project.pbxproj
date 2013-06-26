@@ -19,7 +19,6 @@
 		440066BE174620D30001C15E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 440066BD174620D30001C15E /* Icon.png */; };
 		44076923174B986C002940BA /* Icon_Start01.png in Resources */ = {isa = PBXBuildFile; fileRef = 44076922174B986C002940BA /* Icon_Start01.png */; };
 		4429EA7F1730DA010045A098 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4429EA7E1730DA010045A098 /* background.png */; };
-		443343631734A319009772BD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443343621734A319009772BD /* iAd.framework */; };
 		443343651734B757009772BD /* btn_second_back01.png in Resources */ = {isa = PBXBuildFile; fileRef = 443343641734B757009772BD /* btn_second_back01.png */; };
 		443343671734B92B009772BD /* btn_second_top01.png in Resources */ = {isa = PBXBuildFile; fileRef = 443343661734B92B009772BD /* btn_second_top01.png */; };
 		443F8A2E172FE08D000021C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443F8A2D172FE08D000021C1 /* UIKit.framework */; };
@@ -34,6 +33,11 @@
 		443F8A47172FE08D000021C1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443F8A45172FE08D000021C1 /* MainStoryboard.storyboard */; };
 		443F8A4A172FE08D000021C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443F8A49172FE08D000021C1 /* ViewController.m */; };
 		443F8A52172FE1CE000021C1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443F8A51172FE1CE000021C1 /* SecondViewController.m */; };
+		4456296E177A7C7E006FF2FF /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4456296A177A7C7E006FF2FF /* libAdapterNend.a */; };
+		4456296F177A7C7E006FF2FF /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4456296B177A7C7E006FF2FF /* libNendAd.a */; };
+		44562970177A7C7E006FF2FF /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4456296D177A7C7E006FF2FF /* NADView_readme.txt */; };
+		44562972177A7CC6006FF2FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44562971177A7CC6006FF2FF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		44562974177A7CD2006FF2FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44562973177A7CD2006FF2FF /* Security.framework */; };
 		448C8D96173EA5BA009265C3 /* tapMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 448C8D95173EA5BA009265C3 /* tapMusic.wav */; };
 		44B974231733E2D800539415 /* btn_second_center01.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B974201733E2D800539415 /* btn_second_center01.png */; };
 		44B974241733E2D800539415 /* btn_second_left01.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B974211733E2D800539415 /* btn_second_left01.png */; };
@@ -68,7 +72,6 @@
 		440066BD174620D30001C15E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		44076922174B986C002940BA /* Icon_Start01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Start01.png; sourceTree = "<group>"; };
 		4429EA7E1730DA010045A098 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		443343621734A319009772BD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		443343641734B757009772BD /* btn_second_back01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_second_back01.png; sourceTree = "<group>"; };
 		443343661734B92B009772BD /* btn_second_top01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_second_top01.png; sourceTree = "<group>"; };
 		443F8A2A172FE08D000021C1 /* calculate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +92,12 @@
 		443F8A49172FE08D000021C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		443F8A50172FE1CE000021C1 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		443F8A51172FE1CE000021C1 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4456296A177A7C7E006FF2FF /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterNend.a; sourceTree = "<group>"; };
+		4456296B177A7C7E006FF2FF /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		4456296C177A7C7E006FF2FF /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		4456296D177A7C7E006FF2FF /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		44562971177A7CC6006FF2FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		44562973177A7CD2006FF2FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		448C8D95173EA5BA009265C3 /* tapMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tapMusic.wav; sourceTree = "<group>"; };
 		44B974201733E2D800539415 /* btn_second_center01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_second_center01.png; sourceTree = "<group>"; };
 		44B974211733E2D800539415 /* btn_second_left01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_second_left01.png; sourceTree = "<group>"; };
@@ -116,12 +125,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443343631734A319009772BD /* iAd.framework in Frameworks */,
+				44562974177A7CD2006FF2FF /* Security.framework in Frameworks */,
+				44562972177A7CC6006FF2FF /* AdSupport.framework in Frameworks */,
 				44DB28F517315FEF005B7CC6 /* AudioToolbox.framework in Frameworks */,
 				44DB28B8173125FC005B7CC6 /* QuartzCore.framework in Frameworks */,
 				443F8A2E172FE08D000021C1 /* UIKit.framework in Frameworks */,
 				443F8A30172FE08D000021C1 /* Foundation.framework in Frameworks */,
 				443F8A32172FE08D000021C1 /* CoreGraphics.framework in Frameworks */,
+				4456296E177A7C7E006FF2FF /* libAdapterNend.a in Frameworks */,
+				4456296F177A7C7E006FF2FF /* libNendAd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,9 +143,11 @@
 		443F8A21172FE08D000021C1 = {
 			isa = PBXGroup;
 			children = (
+				44562973177A7CD2006FF2FF /* Security.framework */,
+				44562971177A7CC6006FF2FF /* AdSupport.framework */,
+				44562969177A7C7E006FF2FF /* NendAd */,
 				440066BD174620D30001C15E /* Icon.png */,
 				440066BB174620CE0001C15E /* Icon@2x.png */,
-				443343621734A319009772BD /* iAd.framework */,
 				44DB28F417315FEF005B7CC6 /* AudioToolbox.framework */,
 				44DB28B7173125FC005B7CC6 /* QuartzCore.framework */,
 				443F8A33172FE08D000021C1 /* calculate */,
@@ -194,6 +208,17 @@
 				443F8A43172FE08D000021C1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44562969177A7C7E006FF2FF /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				4456296A177A7C7E006FF2FF /* libAdapterNend.a */,
+				4456296B177A7C7E006FF2FF /* libNendAd.a */,
+				4456296C177A7C7E006FF2FF /* NADView.h */,
+				4456296D177A7C7E006FF2FF /* NADView_readme.txt */,
+			);
+			path = NendAd;
 			sourceTree = "<group>";
 		};
 		44E0389117334FC700E033EB /* images */ = {
@@ -313,6 +338,7 @@
 				44076923174B986C002940BA /* Icon_Start01.png in Resources */,
 				44EDF34E175F3B9C004E8E70 /* btn_top_start07.png in Resources */,
 				44EDF350175F3C6D004E8E70 /* btn_top_start08.png in Resources */,
+				44562970177A7C7E006FF2FF /* NADView_readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +442,10 @@
 				GCC_PREFIX_HEADER = "calculate/calculate-Prefix.pch";
 				INFOPLIST_FILE = "calculate/calculate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NendAd\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +458,10 @@
 				GCC_PREFIX_HEADER = "calculate/calculate-Prefix.pch";
 				INFOPLIST_FILE = "calculate/calculate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NendAd\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NADView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<NADViewDelegate>
 -(IBAction)back:(UIStoryboardSegue *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *nendSpace;
+@property (nonatomic,retain)NADView *nadView;
 @end
